@@ -556,7 +556,7 @@ input:focus {
 
   .header__nav  {
     position: fixed;
-    inset: 0 -100% auto auto;
+    inset: 0 -100em auto auto;
     background-color: #02160b;
     padding: 120px 0;
     height: 100vh;
@@ -590,7 +590,36 @@ input:focus {
   }
 }
 
+@media (max-width: 500px) {
+  .logo__title {
+    font-size: 24px;
+  }
+
+  .notification__input {
+    width: 70%;
+  }
+
+  .notification__btn {
+    width: 30%;
+  }
+
+  .popup__content,
+  .popup__textarea {
+    width: 100%;
+  }
+
+  .articels__title {
+    font-size: 37px;
+    line-height: 45px;
+  }
+}
+
 @media (max-width: 440px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .slider__btn-next,
   .slider__btn-prev {
     display: none;

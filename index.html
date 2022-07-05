@@ -11,55 +11,62 @@
 </head>
 
 <body>
-  <section class="intro">
-    <div class="intro-wrapper container">
+  <div class="intro">
+    <div class="intro__wrapper container">
       <header class="header">
         <div class="logo">
-          <img src="./assets/icons/Logo.svg" height="60" width="70 alt="WildLife logo">
-          <p class="logo-title">WildLife</p>
+          <img src="./assets/icons/Logo.svg" height="60" width="70" alt="WildLife">
+          <p class="logo__title">WildLife</p>
         </div>
 
-        <nav class="nav">
-          <ul>
+        <nav class="header__nav nav" data-nav>
+          <button class="header__close transperent-btn"  data-menu-close>
+            <img src="./assets/icons/Close.svg" alt="Close" height="40" width="40">
+          </button>
+          <ul class="nav__list">
             <li><a href="#articels">Articles</a></li>
             <li><a href="#footer">Contacts</a></li>
             <li>
-              <div class="nav-btns">
-                <button class="search-btn transperent-btn">
+              <div class="nav__btns">
+                <button class="nav__btn-search transperent-btn">
                   <img src="./assets/icons/Search.svg" width="32" height="32" alt="Search">
                 </button>
-                <button class="btn transperent-btn">Sign in</button>
+                <button class="nav__btn-signin btn transperent-btn">Sign in</button>
               </div>
             </li>
           </ul>
         </nav>
+
+        <button class="header__burger transperent-btn" data-menu-open>
+          <img src="./assets/icons/Burger.svg" alt="Burger" width="40" height="40">
+        </button>
       </header>
 
-      <article class="donate">
-        <h1 class="donate-title">Survival</h1>
-        <p class="donate-text">
+      <article class="intro__content">
+        <h2 class="intro__title">Survival</h2>
+        <p class="intro__text">
           What this means is that we exist to help protect our environment 
           and do in numbers of ways. You can save the planet by donation.
         </p>
-        <button class="orange-btn btn" data-open-btn>Donate</button>
+        <button class="intro__btn orange-btn btn" data-open-btn>Donate</button>
       </article>
     </div>
-  </section>
+  </div>
 
   <main class="main">
     <section id="articels" class="articels container">
-      <h2 class="section-title">Latest articles</h2>
-      <h3 class="section-subtitle">Breaking news from the wild</h3>
+      <h2 class="articels__title section-title">Latest articles</h2>
+      <h3 class="articels__subtitle section-subtitle">Breaking news from the wild</h3>
 
       <div class="slider">
-        <button class="slider-btn-prev transperent-btn">
+        <button class="slider__btn-prev transperent-btn">
           <img src="./assets/icons/Arrow.svg" alt="prev button">
         </button>
 
-        <div class="slider-body">
-          <div class="slider-inner">
+        <div class="slider__body">
+          <div class="slider__inner">
 
-            <figure class="slider-item">
+            <figure class="slider__item">
               <img src="./assets/images/Deer.jpg" width="300" height="360" alt="Deer image">
               <figcaption>
                 <h4>Deer</h4>
@@ -67,7 +74,7 @@
               </figcaption>
             </figure>
 
-            <figure class="slider-item">
+            <figure class="slider__item">
               <img src="./assets/images/Squirrel.jpg" width="300" height="360" alt="Squirrel image">
               <figcaption>
                 <h4>Squirrel</h4>
@@ -75,7 +82,7 @@
               </figcaption>
             </figure>
 
-            <figure class="slider-item">
+            <figure class="slider__item">
               <img src="./assets/images/Bird.jpg" width="300" height="360" alt="Bird image">
               <figcaption>
                 <h4>Bird</h4>
@@ -85,38 +92,38 @@
           </div>
         </div>
 
-        <button class="slider-btn-next transperent-btn">
+        <button class="slider__btn-next transperent-btn">
           <img src="./assets/icons/Arrow.svg" alt="next button">
         </button>
       </div>
     </section>
 
     <section class="notification container">
-      <h3 class="section-subtitle">Get notified about new amazing articles</h3>
+      <h3 class="notification__title section-subtitle">Get notified about new amazing articles</h3>
 
-      <form class="email-form">
-        <input class="email-input" type="email" id="email" placeholder="Email">
-        <button type="button" class="btn orange-btn">Send</button>
+      <form class="notification__form">
+        <input class="notification__input" type="email" id="email" placeholder="Email">
+        <button type="button" class="notification__btn btn orange-btn">Send</button>
       </form>
     </section>
   </main>
 
   <footer id="footer" class="footer">
-    <div class="footer-wrapper container">
+    <div class="footer__wrapper container">
       <div class="logo">
-        <img src="./assets/icons/Logo.svg" height="60" width="70 alt="WildLife logo">
-        <p class="logo-title">WildLife</p>
+        <img src="./assets/icons/Logo.svg" height="60" width="70" alt="WildLife">
+        <p class="logo__title">WildLife</p>
       </div>
 
-      <nav class="nav">
-        <ul>
+      <nav class="footer_nav nav">
+        <ul class="nav__list">
           <li><a href="#articels">Articles</a></li>
           <li><a href="#">About us</a></li>
           <li><a href="#">Learn more</a></li>
         </ul>
       </nav>
 
-      <div class="contacts">
+      <div class="footer__contacts">
         <ul>
 
           <li>
@@ -148,30 +155,31 @@
     </div>
   </footer>
 
-  <dialog class="pop-up" id="popup">
-    <div class="pop-up-content">
-      <h2 class="section-title">Donate</h2>
+  <dialog class="popup" id="popup">
+    <div class="popup__content">
+      <h2 class="popup__title section-title">Donate</h2>
 
-      <form class="donate-form">
-        <div class="form-control">
-          <label for="name" class="donate-label">Your name</label>
-          <input type="text" class="donate-input" placeholder="Name" id="name" name="name">
+      <form class="popup__form">
+        <div class="popup__formSection">
+          <label for="name" class="popup__label">Your name</label>
+          <input type="text" class="popup__input" placeholder="Name" id="name" name="name">
         </div>
 
-        <div class="form-control">
-          <label for="amount" class="donate-label">Amount</label>
-          <input type="text" class="donate-input" id="amount" placeholder="1000$" name="amount">
+        <div class="popup__formSection">
+          <label for="amount" class="popup__label">Amount</label>
+          <input type="text" class="popup__input" id="amount" placeholder="1000$" name="amount">
         </div>
 
-        <div class="form-control">
-          <label for="comment" class="donate-label">Your comment:</label>
-          <textarea name="comment" id="comment" class="donate-textarea"></textarea>
+        <div class="popup__formSection">
+          <label for="comment" class="popup__label">Your comment:</label>
+          <textarea name="comment" id="comment" class="popup__textarea"></textarea>
         </div>
 
-        <button type="submit" data-submit-btn class="btn">Send</button>
+        <button type="submit" data-submit-btn class="popup__btn btn">Send</button>
       </form>
     </div>
   </dialog>
+  <div class="shadow"></div>
 </body>
 
 </html>

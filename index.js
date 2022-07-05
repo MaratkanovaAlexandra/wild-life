@@ -5,9 +5,12 @@ const popUp = document.querySelector('#popup');
 const userName = document.querySelector('#name');
 const amount = document.querySelector('#amount');
 const comment = document.querySelector('#comment');
+const nav = document.querySelector('[data-nav]');
+const burger = document.querySelector('[data-menu-open]');
+const close = document.querySelector('[data-menu-close]');
+const shadow = document.querySelector('.shadow');
 
-const togglePopUpAnimation = () => 
-    popUp.style.animation = `fade-${popUp.open? 'out' : 'in' } 0.2s forwards`;
+const togglePopUpAnimation = () => popUp.style.animation = `fade-${popUp.open? 'out' : 'in' } 0.2s forwards`;
 
 const openPopUp = () => {
     const top = html.scrollTop;
@@ -33,6 +36,17 @@ const closePopUp = () => {
     }, 200);
 };
 
+const toggleMenu = () => {
+    html.classList.toggle('stop-scroll');
+    shadow.classList.toggle('show-shadow');
+    nav.classList.toggle('open');
+}
+
+const closeMenu = () => {
+    
+}
+
+
 openBtn.addEventListener('click', openPopUp);
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -41,6 +55,8 @@ submitBtn.addEventListener('click', (e) => {
 popUp.addEventListener('click', (e) => {
     if (e.target === popUp) closePopUp()
 });
+burger.addEventListener('click', toggleMenu);
+close.addEventListener('click', toggleMenu);
 
 amount.addEventListener('input', () => {
     if(amount.value.length === 0) return;

@@ -45,7 +45,7 @@ popUp.addEventListener('click', (e) => {
 amount.addEventListener('input', () => {
     if(amount.value.length === 0) return;
     amount.value = amount.value.replace('$', '');
-    if(!/^\d+$/.test(amount.value)) return amount.value = amount.value.slice(0, -1);
+    if(!/^\d+$/.test(amount.value)) return amount.value = `${amount.value.slice(0, -1)}$`;
     amount.value += '$';
     amount.selectionEnd = amount.value.length - 1;
 });

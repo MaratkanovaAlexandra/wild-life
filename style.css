@@ -556,7 +556,7 @@ input:focus {
 
   .header__nav  {
     position: fixed;
-    inset: 0 -100em auto auto;
+    inset: 0 -320px auto auto;
     background-color: #02160b;
     padding: 120px 0;
     height: 100vh;
@@ -629,8 +629,12 @@ input:focus {
     justify-content: center;
   }
 
-  .footer_nav .nav__list,
-  .footer__contacts ul {
+  .footer_nav .nav__list {
     flex-direction: column;
+  }
+
+  .footer__contacts ul {
+    flex-wrap: wrap;
+    max-width: 120px;
   }
 }

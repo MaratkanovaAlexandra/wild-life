@@ -16,7 +16,7 @@
       <header class="header">
         <div class="logo">
           <img src="./assets/icons/Logo.svg" height="60" width="70" alt="WildLife">
-          <p class="logo__title">WildLife</p>
+          <h1 class="logo__title">WildLife</h1>
         </div>
 
         <nav class="header__nav nav" data-nav>
@@ -27,12 +27,12 @@
             <li data-menu-item><a href="#articels">Articles</a></li>
             <li data-menu-item><a href="#footer">Contacts</a></li>
             <li>
-              <div class="nav__btns">
-                <button class="nav__btn-search transperent-btn" data-menu-item>
-                  <img src="./assets/icons/Search.svg" width="32" height="32" alt="Search">
-                </button>
+              <button class="nav__btn-search transperent-btn" data-menu-item>
+                <img src="./assets/icons/Search.svg" width="32" height="32" alt="Search">
+              </button>
+            </li>
+            <li>
                 <button class="nav__btn-signin btn transperent-btn" data-menu-item>Sign in</button>
-              </div>
             </li>
           </ul>
         </nav>
@@ -103,7 +103,7 @@
 
       <form class="notification__form">
         <input class="notification__input" type="email" id="email" placeholder="Email">
-        <button type="button" class="notification__btn btn orange-btn">Send</button>
+        <input type="submit" class="notification__btn btn orange-btn" value="Send">
       </form>
     </section>
   </main>
@@ -127,27 +127,19 @@
         <ul>
 
           <li>
-            <a href="https://facebook.com/">
-              <img src="./assets/icons/Facebook.svg" alt="Facebook" width="16" height="28">
-            </a>
+            <a href="https://facebook.com/" class="footer__contact_link facebook"></a>
           </li>
 
           <li>
-            <a href="https://www.instagram.com/">
-              <img src="./assets/icons/Instagram.svg" alt="Instagram" width="30" height="30">
-            </a>
+            <a href="https://www.instagram.com/" class="footer__contact_link instagram"></a>
           </li>
 
           <li>
-            <a href="https://www.pinterest.ru/">
-              <img src="./assets/icons/Pinterest.svg" alt="Pinterest" width="21" height="27">
-            </a>
+            <a href="https://www.pinterest.ru/" class="footer__contact_link pinterest"></a>
           </li>
 
           <li>
-            <a href="https://web.telegram.org/k/">
-              <img src="./assets/icons/Telegram.svg" alt="Telegram" width="26" height="23">
-            </a>
+            <a href="https://web.telegram.org/k/" class="footer__contact_link telegram"></a>
           </li>
 
         </ul>
@@ -160,17 +152,17 @@
       <h2 class="popup__title section-title">Donate</h2>
 
       <form class="popup__form">
-        <div class="popup__formSection">
+        <div class="popup__form_section">
           <label for="name" class="popup__label">Your name</label>
           <input type="text" class="popup__input" placeholder="Name" id="name" name="name">
         </div>
 
-        <div class="popup__formSection">
+        <div class="popup__form_section">
           <label for="amount" class="popup__label">Amount</label>
           <input type="text" class="popup__input" id="amount" placeholder="1000$" name="amount">
         </div>
 
-        <div class="popup__formSection">
+        <div class="popup__form_section">
           <label for="comment" class="popup__label">Your comment:</label>
           <textarea name="comment" id="comment" class="popup__textarea"></textarea>
         </div>

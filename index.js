@@ -9,6 +9,7 @@ const nav = document.querySelector('[data-nav]');
 const burger = document.querySelector('[data-menu-open]');
 const close = document.querySelector('[data-menu-close]');
 const shadow = document.querySelector('.shadow');
+const menuItems = document.querySelectorAll('[data-menu-item]');
 
 const togglePopUpAnimation = () => popUp.style.animation = `fade-${popUp.open? 'out' : 'in' } 0.2s forwards`;
 
@@ -42,11 +43,6 @@ const toggleMenu = () => {
     nav.classList.toggle('open');
 }
 
-const closeMenu = () => {
-    
-}
-
-
 openBtn.addEventListener('click', openPopUp);
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -57,6 +53,10 @@ popUp.addEventListener('click', (e) => {
 });
 burger.addEventListener('click', toggleMenu);
 close.addEventListener('click', toggleMenu);
+shadow.addEventListener('click', toggleMenu);
+menuItems.forEach(menuItem => menuItem.addEventListener('click', () => {
+    if(window.innerWidth < 850) toggleMenu();
+}));
 
 amount.addEventListener('input', () => {
     if(amount.value.length === 0) return;
